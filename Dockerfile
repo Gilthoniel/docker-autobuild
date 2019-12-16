@@ -1,3 +1,7 @@
-FROM alpine:latest
+FROM golang:1.13
 
-ENTRYPOINT [ "/bin/sh" ]
+WORKDIR /app
+
+COPY . .
+
+CMD [ "run", "main.go" ]
